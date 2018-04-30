@@ -22,17 +22,17 @@ public class DownloadApi {
         FileOutputStream outputStream = null;
         BufferedOutputStream buff = null;
         try {
-            File destFile = new File("/root/novel");
+            File destFile = new File("/home/yszm/novel");
             if (!destFile.exists())
                 destFile.mkdirs();
             //step1.2确认生成文件
-            File fPath =new File("校园风流邪神.txt");
+            File fPath =new File("/home/yszm/novel//校园风流邪神.txt");
             if(!fPath.exists())
                 fPath.createNewFile();
 
             fPath.setReadable(true, false);
             fPath.setWritable(true, false);
-            Runtime.getRuntime().exec(new String[]{ "chmod -R 777 " , "校园风流邪神.txt"});
+            Runtime.getRuntime().exec(new String[]{ "chmod -R 777 " , "/home/yszm/novel/校园风流邪神.txt"});
 
             destFile.setWritable(true, false);
             outputStream = new FileOutputStream(destFile);
