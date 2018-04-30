@@ -22,7 +22,18 @@ public class DownloadApi {
         FileOutputStream outputStream = null;
         BufferedOutputStream buff = null;
         try {
-            File destFile = new File("/root/novel/校园风流邪神.txt");
+            File destFile = new File("/root/novel");
+            if (!destFile.exists())
+                destFile.mkdirs();
+            //step1.2确认生成文件
+            File fPath =new File("校园风流邪神.txt");
+            if(!fPath.exists())
+                fPath.createNewFile();
+
+            fPath.setReadable(true, false);
+            fPath.setWritable(true, false);
+            Runtime.getRuntime().exec(new String[]{ "sudo chmod -R 777 " , "校园风流邪神.txt"});
+
             destFile.setWritable(true, false);
             outputStream = new FileOutputStream(destFile);
             buff = new BufferedOutputStream(outputStream);
