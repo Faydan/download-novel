@@ -22,7 +22,7 @@ public class DownloadApi {
         FileOutputStream outputStream = null;
         BufferedOutputStream buff = null;
         try {
-            File destFile = new File("/root/校园风流邪神.txt");
+            File destFile = new File("/root/novel/校园风流邪神.txt");
             outputStream = new FileOutputStream(destFile);
             buff = new BufferedOutputStream(outputStream);
             List<Article> articleList = ArticleUtils.getArticle(source);
