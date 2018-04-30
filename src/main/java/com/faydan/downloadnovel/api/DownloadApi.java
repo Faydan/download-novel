@@ -26,7 +26,7 @@ public class DownloadApi {
             if (!destFile.exists())
                 destFile.mkdirs();
             //step1.2确认生成文件
-            File fPath =new File("/home/yszm/novel//校园风流邪神.txt");
+            File fPath =new File("/home/yszm/novel/校园风流邪神.txt");
             if(!fPath.exists())
                 fPath.createNewFile();
 
