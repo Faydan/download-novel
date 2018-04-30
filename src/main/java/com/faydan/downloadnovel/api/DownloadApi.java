@@ -22,9 +22,9 @@ public class DownloadApi {
         FileOutputStream outputStream = null;
         BufferedOutputStream buff = null;
         try {
-            File destFile = new File("/home/yszm/novel");
-            if (!destFile.exists())
-                destFile.mkdirs();
+//            File destFile = new File("/home/yszm/novel");
+//            if (!destFile.exists())
+//                destFile.mkdirs();
             //step1.2确认生成文件
             File fPath =new File("/home/yszm/novel/校园风流邪神.txt");
             if(!fPath.exists())
@@ -34,8 +34,7 @@ public class DownloadApi {
             fPath.setWritable(true, true);
 //            Runtime.getRuntime().exec(new String[]{ "chmod -R 777 /home/yszm/novel/校园风流邪神.txt"});
 
-            destFile.setWritable(true, false);
-            outputStream = new FileOutputStream(destFile);
+            outputStream = new FileOutputStream(fPath);
             buff = new BufferedOutputStream(outputStream);
             List<Article> articleList = ArticleUtils.getArticle(source);
             for (Article article : articleList) {
