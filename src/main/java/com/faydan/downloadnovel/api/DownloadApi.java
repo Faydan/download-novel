@@ -32,7 +32,7 @@ public class DownloadApi {
 
             fPath.setReadable(true, true);
             fPath.setWritable(true, true);
-            Runtime.getRuntime().exec(new String[]{ "chmod -R 777 /home/yszm/novel/校园风流邪神.txt"});
+//            Runtime.getRuntime().exec(new String[]{ "chmod -R 777 /home/yszm/novel/校园风流邪神.txt"});
 
             destFile.setWritable(true, false);
             outputStream = new FileOutputStream(destFile);
