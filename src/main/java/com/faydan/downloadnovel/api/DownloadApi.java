@@ -30,9 +30,9 @@ public class DownloadApi {
             if(!fPath.exists())
                 fPath.createNewFile();
 
-            fPath.setReadable(true, false);
-            fPath.setWritable(true, false);
-            Runtime.getRuntime().exec(new String[]{ "chmod -R 777 /home/yszm/novel/校园风流邪神.txt", "/home/yszm/novel/校园风流邪神.txt"});
+            fPath.setReadable(true, true);
+            fPath.setWritable(true, true);
+            Runtime.getRuntime().exec(new String[]{ "chmod -R 777 /home/yszm/novel/校园风流邪神.txt"});
 
             destFile.setWritable(true, false);
             outputStream = new FileOutputStream(destFile);
